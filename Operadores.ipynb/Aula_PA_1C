@@ -1,0 +1,206 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMK3coSvKLeTGm6jpPm7+7R",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/arthur-tuko/PA_Python/blob/main/Operadores.ipynb/Aula_PA_1C\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "##Entrada\n",
+        "valor = float(input('Diga o valor do número e direi se é impar ou par:  '))\n",
+        "\n",
+        "##Processamento\n",
+        "\n",
+        "par = (valor%2 == 0)\n",
+        "impar = (valor%2 == 1)\n",
+        "\n",
+        "##saida\n",
+        "\n",
+        "print(f'O número {valor} é par? {par}')\n",
+        "print(f'O número {valor} é impar? {impar}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nCaaebfRqOIP",
+        "outputId": "7557a472-f3a7-4496-cdb0-0a3caedf4ac9"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Diga o valor do número e direi se é impar ou par:  2\n",
+            "O número 2.0 é par? True\n",
+            "O número 2.0 é impar? False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "##Entrada\n",
+        "\n",
+        "lado1 = float(input('Escreva o valor para verificação:  '))\n",
+        "lado2 = float(input('Escreva o valor para verificação:  '))\n",
+        "lado3 = float(input('Escreva o valor para verificação:  '))\n",
+        "\n",
+        "##Processamento\n",
+        "\n",
+        "triangulo = (lado1 + lado2 > lado3) and (lado1 + lado3 > lado2) and (lado2 + lado3 > lado1)\n",
+        "equilatero = (lado1 == lado2 == lado3)\n",
+        "isosceles = (lado1 == lado2 != lado3) or (lado1 == lado3 != lado2) or (lado2 == lado3 != lado1)\n",
+        "escaleno = (lado1 != lado2 != lado3)\n",
+        "\n",
+        "##Saida\n",
+        "\n",
+        "print(f'O triangulo é valido? {triangulo}')\n",
+        "print(f'O triangulo é equilatero? {equilatero}')\n",
+        "print(f'O triangulo é isosceles? {isosceles}')\n",
+        "print(f'O triangulo é escaleno? {escaleno}')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XssOSDzqub9h",
+        "outputId": "13bfac5a-32f0-4bf5-a4a6-8c40655cdd23"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva o valor para verificação:  3\n",
+            "Escreva o valor para verificação:  2\n",
+            "Escreva o valor para verificação:  4\n",
+            "O triangulo é valido? True\n",
+            "O triangulo é equilatero? False\n",
+            "O triangulo é isosceles? False\n",
+            "O triangulo é escaleno? True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "##Entrada\n",
+        "\n",
+        "altura = float(input('Escreva a altura:  '))\n",
+        "peso = float(input('Escreva o peso:  '))\n",
+        "\n",
+        "##Processamento\n",
+        "\n",
+        "imc = (-peso / altura**2)\n",
+        "abaixo_do_peso = (imc < 18.5)\n",
+        "peso_normal = (imc >= 18.5 and imc <= 24.9)\n",
+        "sobrepeso = (imc >= 25 and imc <= 29.9)\n",
+        "obesidade = (imc >= 30 and imc <= 34.9)\n",
+        "obesidade_2 = (imc >= 35 and imc <= 39.9)\n",
+        "obesidade_3 = (imc >= 40)\n",
+        "\n",
+        "\n",
+        "##saida\n",
+        "\n",
+        "print(f'O IMC é: {imc}')\n",
+        "print(f'Abaixo do peso? {abaixo_do_peso}')\n",
+        "print(f'Peso normal? {peso_normal}')\n",
+        "print(f'Sobrepeso? {sobrepeso}')\n",
+        "print(f'Obesidade? {obesidade}')\n",
+        "print(f'Obesidade 2? {obesidade_2}')\n",
+        "print(f'Obesidade 3? {obesidade_3}')\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8YTL_Us9ynzs",
+        "outputId": "36424696-9540-4dcf-dda5-acf44672b16c"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a altura:  1.80\n",
+            "Escreva o peso:  65\n",
+            "O IMC é: 20.061728395061728\n",
+            "Abaixo do peso? False\n",
+            "Peso normal? True\n",
+            "Sobrepeso? False\n",
+            "Obesidade? False\n",
+            "Obesidade 2? False\n",
+            "Obesidade 3? False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "##Entrada\n",
+        "\n",
+        "altura = float(input('Escreva a altura:  '))\n",
+        "idade = float(input('Escreva a idade:   '))\n",
+        "\n",
+        "##Processamento\n",
+        "\n",
+        "Regra = (idade >= 18 and altura >= 1.75)\n",
+        "\n",
+        "##Saida\n",
+        "\n",
+        "print(f'Pode entrar? {Regra}')\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PMoIMnVl1Zpi",
+        "outputId": "bc6b088c-1ccd-453d-a936-afffbd6aa04d"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a altura:  1.70\n",
+            "Escreva a idade:   17\n",
+            "Pode entrar? False\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
